@@ -5,8 +5,8 @@
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     elementFormDefault="qualified"
 
-    targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-ima-cnr/tree/master"
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ima-cnr/tree/master"
+    targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/tree/master"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/tree/master"
 >
     <!-- WRTODO: Replace all occurrences of 'master' (in all projects) with 'stable-v1' upon release. -->
 
@@ -28,7 +28,7 @@
         <xs:annotation>
             <xs:documentation>
                 This describes the format of the response returned by the EWP Interinstitutional
-                Mobility Agreement CNR API.
+                Agreement CNR API.
                 
                 Currently CNR responses are always empty.
             </xs:documentation>

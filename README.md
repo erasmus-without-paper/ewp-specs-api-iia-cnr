@@ -1,5 +1,5 @@
-Interinstitutional Mobility Agreement CNR API
-=============================================
+Interinstitutional Agreement CNR API
+====================================
 
 * [What is the status of this document?][statuses]
 * [See the index of all other EWP Specifications][develhub]
@@ -8,10 +8,10 @@ Interinstitutional Mobility Agreement CNR API
 Summary
 -------
 
-This document describes the **Interinstitutional Mobility Agreement CNR API**.
-This API is implemented by the all EWP partners, and called by **EWP IMA
-Repository** whenever related IMAs are changed. It allows the partners to
-listen for changes in all of their IMAs.
+This document describes the **Interinstitutional Agreement CNR API**.
+This API is implemented by the all EWP partners, and called by **EWP IIA
+Repository** whenever related IIAs are changed. It allows the partners to
+listen for changes in all of their IIAs.
 
 
 Request method
@@ -27,10 +27,10 @@ Request parameters
 Parameters MUST be provided in the `application/x-www-form-urlencoded` format.
 
 
-### `ima_id` (repeatable, required)
+### `iia_id` (repeatable, required)
 
-A list of IMA identifiers - IDs of agreements that were recently updated (in
-the *EWP IMA Repository*).
+A list of IIA identifiers - IDs of agreements that were recently updated (in
+the *EWP IIA Repository*).
 
 This parameter is *repeatable*, so the request MAY contain multiple occurrences
 of it. The server SHOULD process all of them.
@@ -39,7 +39,7 @@ of it. The server SHOULD process all of them.
 Permissions
 -----------
 
-* Servers MUST allow this API to be called *at least* by **EWP IMA
+* Servers MUST allow this API to be called *at least* by **EWP IIA
   Repository** (you can determine it by looking at the `<apis-implemented>` of
   the caller, as you did in [Echo API][echo]).
   
@@ -52,7 +52,7 @@ Handling of invalid parameters
 
  * General [error handling rules][error-handling] apply. 
 
- * Invalid (unknown) `ima_id` values MUST be ignored. Servers MUST return
+ * Invalid (unknown) `iia_id` values MUST be ignored. Servers MUST return
    a valid (HTTP 200) XML response whenever the request has been properly
    received (even if it contained unknown values).
 
@@ -71,4 +71,4 @@ Servers MUST respond with a valid XML document described by the [response.xsd]
 [echo]: https://github.com/erasmus-without-paper/ewp-specs-api-echo
 [error-handling]: https://github.com/erasmus-without-paper/ewp-specs-architecture#error-handling
 [institutions-api]: https://github.com/erasmus-without-paper/ewp-specs-api-institutions
-[imas-api]: https://github.com/erasmus-without-paper/ewp-specs-api-imas
+[iias-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iias
