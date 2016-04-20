@@ -42,7 +42,7 @@ Permissions
 * Servers MUST allow this API to be called *at least* by **EWP IIA
   Repository** (you can determine it by looking at the `<apis-implemented>` of
   the caller, as you did in [Echo API][echo]).
-  
+
 * Implementers MAY allow this API to be called by other clients too (but it is
   not required).
 
@@ -50,11 +50,12 @@ Permissions
 Handling of invalid parameters
 ------------------------------
 
- * General [error handling rules][error-handling] apply. 
+ * General [error handling rules][error-handling] apply.
 
- * Invalid (unknown) `iia_id` values MUST be ignored. Servers MUST return
-   a valid (HTTP 200) XML response whenever the request has been properly
-   received (even if it contained unknown values).
+ * Please note, that receiving unknown `iia_id` values is NOT an error. This
+   usually indicates that a new IIA for your institution has been created, and
+   you probably want to fetch it. Servers MUST return a valid (HTTP 200) XML
+   response whenever the request has been properly received.
 
 
 Response

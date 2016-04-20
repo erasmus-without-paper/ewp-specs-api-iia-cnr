@@ -14,7 +14,7 @@
         schemaLocation="https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd"
         namespace="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     />
-    
+
     <xs:annotation>
         <xs:documentation>
             This schema is a part of the Erasmus Without Paper project. Before you start
@@ -29,7 +29,7 @@
             <xs:documentation>
                 This describes the format of the response returned by the EWP Interinstitutional
                 Agreement CNR API.
-                
+
                 Currently CNR responses are always empty.
             </xs:documentation>
         </xs:annotation>
