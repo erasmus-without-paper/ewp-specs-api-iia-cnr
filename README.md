@@ -65,6 +65,18 @@ Servers MUST respond with a valid XML document described by the [response.xsd]
 (response.xsd) schema. See the schema annotations for further information.
 
 
+Safety measures
+---------------
+
+It is NOT guaranteed that all notifications will be delivered to you promptly.
+Some notifications may also **not reach you at all**, e.g. due to
+implementation errors on the sender's server.
+
+You SHOULD periodically verify if your copies are up-to-date. Proper caching
+techniques and/or periodical use of [IIA Search API][iia-search-api] can help
+you with that.
+
+
 [develhub]: http://developers.erasmuswithoutpaper.eu/
 [statuses]: https://github.com/erasmus-without-paper/ewp-specs-management#statuses
 [registry-spec]: https://github.com/erasmus-without-paper/ewp-specs-api-registry
@@ -73,3 +85,4 @@ Servers MUST respond with a valid XML document described by the [response.xsd]
 [error-handling]: https://github.com/erasmus-without-paper/ewp-specs-architecture#error-handling
 [institutions-api]: https://github.com/erasmus-without-paper/ewp-specs-api-institutions
 [iias-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iias
+[iia-search-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iia-search
