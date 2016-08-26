@@ -9,9 +9,10 @@ Summary
 -------
 
 This document describes the **Interinstitutional Agreement CNR API**.
-This API is implemented by the all EWP partners, and called by **EWP IIA
-Repository** whenever related IIAs are changed. It allows the partners to
-listen for changes in all of their IIAs.
+This API can be implemented by all EWP partners, and will be called by some
+other EWP partners whenever related IIAs are changed on their side. It allows
+the partners to listen for changes in other copies of their IIAs kept in the
+EWP Network.
 
 
 Request method
@@ -24,27 +25,30 @@ Request method
 Request parameters
 ------------------
 
-Parameters MUST be provided in the `application/x-www-form-urlencoded` format.
+Parameters MUST be provided in the regular `application/x-www-form-urlencoded`
+format.
 
 
-### `iia_id` (repeatable, required)
+### `notifier_hei_id` (required)
 
-A list of IIA identifiers - IDs of agreements that were recently updated (in
-the *EWP IIA Repository*).
+Identifier of the HEI which has recently updated their copy of the IIA on their
+servers, and is now sending the notification about this event.
 
-This parameter is *repeatable*, so the request MAY contain multiple occurrences
-of it. The server SHOULD process all of them.
+Server implementers SHOULD verify if the request is signed with a proper client
+certificate bound to this HEI.
+
+
+### `iia_id` (required)
+
+Identifier of the IIA which has recently been changed (created, updated or
+deleted) on the notifier-HEI's servers.
 
 
 Permissions
 -----------
 
-* Servers MUST allow this API to be called *at least* by **EWP IIA
-  Repository** (you can determine it by looking at the `<apis-implemented>` of
-  the caller, as you did in [Echo API][echo]).
-
-* Implementers MAY allow this API to be called by other clients too (but it is
-  not required).
+* Servers MUST allow this API to be called at least by all EWP Hosts which
+  cover any HEI.
 
 
 Handling of invalid parameters
@@ -52,10 +56,10 @@ Handling of invalid parameters
 
  * General [error handling rules][error-handling] apply.
 
- * Please note, that receiving unknown `iia_id` values is NOT an error. This
-   usually indicates that a new IIA for your institution has been created, and
-   you probably want to fetch it. Servers MUST return a valid (HTTP 200) XML
-   response whenever the request has been properly received.
+ * Please note, that receiving unknown `iia_id` values is NOT an error, and you
+   MUST return a proper HTTP 200 response in this case. This usually indicates
+   that a new IIA related with your institution has been created on some other
+   institution's servers, and you may want to fetch it.
 
 
 Response
@@ -65,16 +69,12 @@ Servers MUST respond with a valid XML document described by the [response.xsd]
 (response.xsd) schema. See the schema annotations for further information.
 
 
-Safety measures
----------------
+Keep in mind that...
+--------------------
 
 It is NOT guaranteed that all notifications will be delivered to you promptly.
-Some notifications may also **not reach you at all**, e.g. due to
-implementation errors on the sender's server.
-
-You SHOULD periodically verify if your copies are up-to-date. Proper caching
-techniques and/or periodical use of [IIA Search API][iia-search-api] can help
-you with that.
+Some notifications may also **not reach you at all**, because not every server
+sends such notifications.
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
