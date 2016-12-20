@@ -73,8 +73,9 @@ Keep in mind that...
 --------------------
 
 It is NOT guaranteed that all notifications will be delivered to you promptly.
-Some notifications may also **not reach you at all**, because not every server
-sends such notifications.
+Some notifications may also **not reach you at all**. Also, not every server
+sends such notifications (look for `<sends-notifications/>` element in
+[IIAs APIs][iias-api]' manifest entries to get a clue which servers do).
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
