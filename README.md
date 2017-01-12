@@ -14,6 +14,9 @@ other EWP partners whenever related IIAs are changed on their side. It allows
 the partners to listen for changes in other copies of their IIAs kept in the
 EWP Network.
 
+CNR stands for Change Notification Receiver. For a detailed introduction on how
+CNR APIs work, please read [this page][cnr-intro].
+
 
 Request method
 --------------
@@ -87,3 +90,4 @@ sends such notifications (look for `<sends-notifications/>` element in
 [institutions-api]: https://github.com/erasmus-without-paper/ewp-specs-api-institutions
 [iias-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iias
 [iia-search-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iia-search
+[cnr-intro]: https://github.com/erasmus-without-paper/ewp-specs-mobility-flowcharts#notification-senders
