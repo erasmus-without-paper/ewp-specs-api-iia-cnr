@@ -90,4 +90,4 @@ sends such notifications (look for `<sends-notifications/>` element in
 [institutions-api]: https://github.com/erasmus-without-paper/ewp-specs-api-institutions
 [iias-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iias
 [iia-search-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iia-search
-[cnr-intro]: https://github.com/erasmus-without-paper/ewp-specs-mobility-flowcharts#notification-senders
+[cnr-intro]: https://github.com/erasmus-without-paper/ewp-specs-architecture#cnr
