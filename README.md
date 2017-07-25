@@ -47,11 +47,11 @@ Identifier of the IIA which has recently been changed (created, updated or
 deleted) on the notifier-HEI's servers.
 
 
-Permissions
------------
+Security
+--------
 
-* Servers MUST allow this API to be called at least by all EWP Hosts which
-  cover any HEI.
+For all endpoints of this API, implementers MUST follow the rules described in
+[EWP Authentication and Security, Version 1][sec-v1] document.
 
 
 Handling of invalid parameters
@@ -92,3 +92,4 @@ sends such notifications (look for `<sends-notifications/>` element in
 [iias-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iias
 [iia-search-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iia-search
 [cnr-intro]: https://github.com/erasmus-without-paper/ewp-specs-architecture#cnr
+[sec-v1]: https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v1
