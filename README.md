@@ -50,8 +50,15 @@ deleted) on the notifier-HEI's servers.
 Security
 --------
 
-For all endpoints of this API, implementers MUST follow the rules described in
-[EWP Authentication and Security, Version 1][sec-v1] document.
+This version of this API uses [standard EWP Authentication and Security,
+Version 2][sec-v2]. Server implementers choose which security methods they
+support by declaring them in their Manifest API entry.
+
+This API does not expose any sensitive data, it only notifies the server that
+it should reload portions of its data. For this reason, it is RECOMMENDED for
+server implementers to not be overly strict on security methods they require
+(i.e. it is RECOMMENDED to *not* require extra layers of encryption in requests
+and responses - TLS seems more than enough).
 
 
 Handling of invalid parameters
@@ -92,4 +99,4 @@ sends such notifications (look for `<sends-notifications/>` element in
 [iias-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iias
 [iia-search-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iia-search
 [cnr-intro]: https://github.com/erasmus-without-paper/ewp-specs-architecture#cnr
-[sec-v1]: https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v1
+[sec-v2]: https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
