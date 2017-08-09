@@ -5,6 +5,12 @@ This document describes all the changes made to the *Interinstitutional
 Agreement CNR API* document, starting from its first beta draft version.
 
 
+2.0.1
+-----
+
+* Fix invalid `schemaLocation` (use absolute URL).
+
+
 2.0.0
 -----
 
