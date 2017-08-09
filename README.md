@@ -8,6 +8,9 @@ Interinstitutional Agreement CNR API
 Summary
 -------
 
+**This version (v1.x.x) of Interinstitutional Agreement CNR API is now
+DEPRECATED. Please upgrade to version 2.x.x.**
+
 This document describes the **Interinstitutional Agreement CNR API**.
 This API can be implemented by all EWP partners, and will be called by some
 other EWP partners whenever related IIAs are changed on their side. It allows
