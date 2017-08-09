@@ -15,9 +15,9 @@
     />
 
     <xs:import
-        schemaLocation="../ewp-specs-sec-intro/schema.xsd"
+        schemaLocation="https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd"
         namespace="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-    /> <!-- WRTODO: absolute paths -->
+    />
 
     <xs:annotation>
         <xs:documentation>
