@@ -66,10 +66,9 @@ Handling of invalid parameters
 
  * General [error handling rules][error-handling] apply.
 
- * Please note, that receiving unknown `iia_id` values is NOT an error, and you
-   MUST return a proper HTTP 200 response in this case. This usually indicates
-   that a new IIA related with your institution has been created on some other
-   institution's servers, and you may want to fetch it.
+ * Servers MUST return a valid (HTTP 200) XML response whenever the request has
+   been [properly received][bad-cnr-request]. Unless HTTP 200 is received,
+   clients are RECOMMENDED to automatically retry the request after some time.
 
 
 Response
@@ -99,4 +98,5 @@ sends such notifications (look for `<sends-notifications/>` element in
 [iias-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iias
 [iia-search-api]: https://github.com/erasmus-without-paper/ewp-specs-api-iia-search
 [cnr-intro]: https://github.com/erasmus-without-paper/ewp-specs-architecture#cnr
+[bad-cnr-request]: https://github.com/erasmus-without-paper/ewp-specs-architecture#bad-cnr-request
 [sec-v2]: https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
