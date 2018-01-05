@@ -5,6 +5,12 @@ This document describes all the changes made to the *Interinstitutional
 Agreement CNR API* document, starting from its first beta draft version.
 
 
+2.0.2
+-----
+
+* Added a better explanation of what "properly received" means.
+
+
 2.0.1
 -----
 
