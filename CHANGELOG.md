@@ -5,6 +5,12 @@ This document describes all the changes made to the *Interinstitutional
 Agreement CNR API* document, starting from its first beta draft version.
 
 
+2.0.3
+-----
+
+* Update documentation after requiring client CNR implementation.
+
+
 2.0.2
 -----
 
