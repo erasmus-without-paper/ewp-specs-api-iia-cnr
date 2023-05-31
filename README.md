@@ -32,19 +32,11 @@ Parameters MUST be provided in the regular `application/x-www-form-urlencoded`
 format.
 
 
-### `notifier_hei_id` (required)
-
-Identifier of the HEI which has recently updated their copy of the IIA on their
-servers, and is now sending the notification about this event.
-
-Server implementers SHOULD verify if the request is signed with a proper client
-certificate bound to this HEI.
-
 
 ### `iia_id` (required)
 
 Identifier of the IIA which has recently been changed (created, updated or
-deleted) on the notifier-HEI's servers.
+deleted) by the calling HEI.
 
 
 Security
