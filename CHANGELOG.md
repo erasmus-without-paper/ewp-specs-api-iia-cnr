@@ -5,6 +5,12 @@ This document describes all the changes made to the *Interinstitutional
 Agreement CNR API* document, starting from its first beta draft version.
 
 
+3.0.0
+-----
+
+* Remove notifier_hei_id parameter.
+
+
 2.0.3
 -----
 
