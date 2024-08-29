@@ -46,12 +46,6 @@ This version of this API uses [standard EWP Authentication and Security,
 Version 2][sec-v2]. Server implementers choose which security methods they
 support by declaring them in their Manifest API entry.
 
-This API does not expose any sensitive data, it only notifies the server that
-it should reload portions of its data. For this reason, it is RECOMMENDED for
-server implementers to not be overly strict on security methods they require
-(i.e. it is RECOMMENDED to *not* require extra layers of encryption in requests
-and responses - TLS seems more than enough).
-
 
 Handling of invalid parameters
 ------------------------------
